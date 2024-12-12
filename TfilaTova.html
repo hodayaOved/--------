@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" x-data>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אפליקציית בית הכנסת - הפתרון המושלם לניהול מידע</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <style>
+        header {
+            background: linear-gradient(to bottom left, #163e64, #617587f7) !important;
+            height: 55vh;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+
+        .top-path {
+            clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+
+        }
+
+        .turquoise {
+            background: #a6caec6e;
+        }
+
+        /* אנימציית fade-in כללית */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .line.headers-text-separator {
+            border-bottom: 4px solid #1f2937;
+            width: 5%;
+        }
+
+        .line.headers-text-separator.text-center {
+            margin: auto;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="./לוגו.png" width="200" height="200" alt="משתמש" class="">
+            </div>
+            <div class="space-x-4">
+                <a href="#features" class="hover:text-blue-600 transition duration-300">תכונות</a>
+                <a href="#referral" class="hover:text-blue-600 transition duration-300">תוכנית הפניות</a>
+                <a href="#contact" class="hover:text-blue-600 transition duration-300">צור קשר</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-r from-blue-500 to-blue-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center fade-in">
+            <h1 class="text-4xl font-bold mb-4 mt-8">הפתרון המושלם לניהול מידע בבית הכנסת שלך!</h1>
+            <p class="text-xl mt-4 mb-8">הטכנולוגיה המתקדמת ביותר בשירות הקהילה</p>
+            <div class="space-x-4 space-x-4">
+                <a href="#"
+                    class="bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-100 transition duration-300 transform hover:scale-105">הורד
+                    עכשיו</a>
+                <a href="#"
+                    class="border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 transform hover:scale-105">גבאי?הוסף
+                    את בי"הכ שלך</a>
+            </div>
+        </div>
+    </header>
+    <!-- About Section (אודות) -->
+    <section id="about" class="py-16 fade-in">
+        <div class="container mx-auto px-4">
+            <div class="mb-5">
+                <h2 class="text-3xl font-bold mb-4">מהי תפילה טובה?</h2>
+            </div>
+            <div class="line headers-text-separator"></div>
+            <div class="grid md:grid-cols-2 gap-8 items-center mt-5">
+                <div>
+                    <p class="text-gray-700 mb-6">
+                        אנו גאים להביא חדשנות ופתרונות חכמים לחיבור קהילות בצורה פשוטה ויעילה.
+                        החברה שלנו מתמחה בפיתוח מסכים לבתי כנסת, המאפשרים להציג זמני תפילות, הודעות ,שמות
+                        נפטרים ועוד.
+                    </p>
+                    <p class="text-gray-700">
+
+                      המערכת שפיתחנו משלבת ממשק משתמש חכם וקל לתפעול, שמאפשר<b>  לעדכן מידע במהירות ובזמן אמת. </b>
+                        כעת, ניהול הקהילה הופך לפשוט, נוח ונגיש יותר מאי פעם.
+
+                    </p>
+                    <p class="text-gray-700">
+                        <b>הייחודיות שלנו טמונה בחיבור בין הקהילה המקומית לעולם</b> – המידע זמין לא רק על המסכים בבתי הכנסת,
+                        אלא גם דרך האפליקציה שלנו, כך שתוכלו להתעדכן מכל מקום ובכל זמן.
+                        בזכות העיצוב המודרני והממשק הידידותי, האפליקציה מתאימה לכל המשתמשים – צעירים ומבוגרים כאחד.
+
+                  
+                    <p class="text-gray-700">
+
+                        אנו מאמינים שטכנולוגיה צריכה להיות נגישה לכולם. לכן, אנו מציעים פתרונות מתקדמים במחירים שמתאימים
+                        לכל קהילה.
+
+                    </p>
+                </div>
+                <!-- <div class="flex justify-center">
+                <img src="path/to/your/about-image.jpg" alt="אודות האפליקציה" class="rounded-lg shadow-lg w-full max-w-sm">
+            </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section id="features" class="top-path turquoise mx-auto px-4 py-20 fade-in mt-22 mb-22">
+        <div class="container mx-auto px-4 text-center">
+
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 mt-10">מה תקבלו מהאפליקציה?</h2>
+                <div class="line text-center headers-text-separator"></div>
+                <p class="text-xl text-gray-600 mt-4">פתרון חדשני שנוצר מתוך הבנת הצרכים האמיתיים של הקהילה</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                        </path>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-2">ניהול פשוט לגבאי</h3>
+                    <p>עדכון תפילות, אירועים והודעות בקלות ובמהירות</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-2">זמני תפילות מדויקים</h3>
+                    <p>גישה מהירה ונוחה לזמני תפילות ואירועים</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-2">תצוגה מודרנית</h3>
+                    <p>עיצוב מיוחד ומותאם למסך בית הכנסת</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Program -->
+    <section id="referral" class="py-16 fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">הזמינו חברים והרוויחו יחד!</h2>
+            <p class="text-xl mb-8">הפיצו את האפליקציה וקבלו הטבות מיוחדות</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#"
+                    class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105">הזמן
+                    עכשיו</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="turquoise mx-auto px-4 py-16 fade-in">
+        <div class="container mx-auto px-4 text-center">
+
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">מה אומרים המשתמשים</h2>
+                <div class="line text-center headers-text-separator"></div>
+
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="mb-4">"העיצוב המודרני והשימושיות הופכים את ניהול בית הכנסת לחוויה נעימה."</p>
+                    <div class="flex items-center justify-center">
+                        <div>
+                            <p class="font-bold">שרה אברהמי</p>
+                            <p class="text-gray-600">יו"ר ועד בית כנסת</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="mb-4">"העיצוב המודרני והשימושיות הופכים את ניהול בית הכנסת לחוויה נעימה."</p>
+                    <div class="flex items-center justify-center">
+                        <div>
+                            <p class="font-bold">שרה אברהמי</p>
+                            <p class="text-gray-600">יו"ר ועד בית כנסת</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="mb-4">"העיצוב המודרני והשימושיות הופכים את ניהול בית הכנסת לחוויה נעימה."</p>
+                    <div class="flex items-center justify-center">
+                        <div>
+                            <p class="font-bold">שרה אברהמי</p>
+                            <p class="text-gray-600">יו"ר ועד בית כנסת</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FAQ Section (שאלות ותשובות) -->
+    <section id="faq" class="container mx-auto px-4 py-16 fade-in" x-data="{ openQuestion: null }">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">שאלות ותשובות נפוצות</h2>
+            <p class="text-xl text-gray-600">כל מה שרציתם לדעת על האפליקציה</p>
+        </div>
+        <div class="space-y-4 mx-auto">
+            <div class="border-b border-gray-300 py-4">
+                <button @click="openQuestion = openQuestion === 1 ? null : 1"
+                    class="flex justify-between w-full text-right text-gray-800 font-semibold text-lg focus:outline-none">
+                    <span>כיצד מתקינים את האפליקציה?</span>
+                    <span x-show="openQuestion !== 1" aria-hidden="true">+</span>
+                    <span x-show="openQuestion === 1" aria-hidden="true">-</span>
+                </button>
+                <div x-show="openQuestion === 1" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-1"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-1" class="mt-2 text-gray-700">
+                    פשוט מורידים את האפליקציה מחנות האפליקציות, מבצעים רישום קצר, ומתחילים להשתמש בה באופן מיידי.
+                </div>
+            </div>
+            <div class="border-b border-gray-300 py-4">
+                <button @click="openQuestion = openQuestion === 2 ? null : 2"
+                    class="flex justify-between w-full text-right text-gray-800 font-semibold text-lg focus:outline-none">
+                    <span>האם שימוש באפליקציה כרוך בתשלום?</span>
+                    <span x-show="openQuestion !== 2" aria-hidden="true">+</span>
+                    <span x-show="openQuestion === 2" aria-hidden="true">-</span>
+                </button>
+                <div x-show="openQuestion === 2" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-1"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-1" class="mt-2 text-gray-700">
+                    ניתן להשתמש באפליקציה ללא עלות בסיסית. קיימות חבילות פרימיום בתשלום המציעות פונקציות מתקדמות.
+                </div>
+            </div>
+            <div class="border-b border-gray-300 py-4">
+                <button @click="openQuestion = openQuestion === 3 ? null : 3"
+                    class="flex justify-between w-full text-right text-gray-800 font-semibold text-lg focus:outline-none">
+                    <span>כיצד מקבלים התראות על אירועים או עדכונים?</span>
+                    <span x-show="openQuestion !== 3" aria-hidden="true">+</span>
+                    <span x-show="openQuestion === 3" aria-hidden="true">-</span>
+                </button>
+                <div x-show="openQuestion === 3" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-1"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-1" class="mt-2 text-gray-700">
+                    האפליקציה שולחת התראות ישירות לסמארטפון עם פרטי האירוע או העדכון. אפשר להתאים את ההגדרות ולקבל
+                    התראות רק על מה שחשוב לכם.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section (מחירים) -->
+    <section id="pricing" class="bg-gray-100 py-16 fade-in">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">בחרו את התוכנית המתאימה לכם</h2>
+                <p class="text-xl text-gray-600">הצטרפו לאחת מהתוכניות שלנו והתחילו ליהנות מהיתרונות</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- תוכנית בסיסית -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4">בסיסית</h3>
+                    <p class="text-4xl font-bold mb-6">₪26<span class="text-lg">/חודש</span></p>
+                    <ul class="mb-6">
+                        <li class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3 9.586a1 1 0 011.414-1.414L8.414 12.172l6.293-6.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            עדכוני תפילות ואירועים
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3 9.586a1 1 0 011.414-1.414L8.414 12.172l6.293-6.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            גישה למשתמשים
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3 9.586a1 1 0 011.414-1.414L8.414 12.172l6.293-6.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            תמיכה בסיסית
+                        </li>
+                    </ul>
+                    <a href="#"
+                        class="block bg-blue-600 text-white text-center px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">הצטרף
+                        עכשיו</a>
+                </div>
+                <!-- תוכנית פרימיום -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4">פרימיום</h3>
+                    <p class="text-4xl font-bold mb-6">₪59<span class="text-lg">/חודש</span></p>
+                    <ul class="mb-6">
+                        <li class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3 9.586a1 1 0 011.414-1.414L8.414 12.172l6.293-6.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            כל התכונות של תוכנית בסיסית
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3 9.586a1 1 0 011.414-1.414L8.414 12.172l6.293-6.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            התראות מותאמות אישית
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3 9.586a1 1 0 011.414-1.414L8.414 12.172l6.293-6.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            תמיכה מתקדמת
+                        </li>
+                    </ul>
+                    <a href="#"
+                        class="block bg-blue-600 text-white text-center px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">הצטרף
+                        עכשיו</a>
+                </div>
+                <!-- תוכנית עסקית -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4">עסקית</h3>
+                    <p class="text-4xl font-bold mb-6">₪99<span class="text-lg">/חודש</span></p>
+                    <ul class="mb-6">
+                        <li class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3 9.586a1 1 0 011.414-1.414L8.414 12.172l6.293-6.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            כל התכונות של תוכנית פרימיום
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3 9.586a1 1 0 011.414-1.414L8.414 12.172l6.293-6.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            ניהול משתמשים מתקדמים
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3 9.586a1 1 0 011.414-1.414L8.414 12.172l6.293-6.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            תמיכה אישית
+                        </li>
+                    </ul>
+                    <a href="#"
+                        class="block bg-blue-600 text-white text-center px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">הצטרף
+                        עכשיו</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="bg-gray-100 py-16 fade-in">
+        <div class="container mx-auto px-4">
+            <div class="mx-auto bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-center mb-8">השאירו פרטים ונחזור אליכם</h2>
+                <form>
+                    <div class="mb-4">
+                        <label class="block mb-2">שם מלא</label>
+                        <input type="text" class="w-full px-3 py-2 border rounded-lg" placeholder="הזן את שמך">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-2">דוא"ל</label>
+                        <input type="email" class="w-full px-3 py-2 border rounded-lg" placeholder="הזן את כתובת הדואל">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-2">טלפון</label>
+                        <input type="tel" class="w-full px-3 py-2 border rounded-lg" placeholder="הזן את מספר הטלפון">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105">שלח
+                            פרטים</button>
+                    </div>
+                    <p class="text-sm text-gray-600 text-center mt-4">הפרטים שלכם יישמרו באופן מאובטח</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2024 אפליקציית בית הכנסת שלי. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
